@@ -131,7 +131,7 @@ def nhs_check_digit(first_nine: str) -> int | None:
 
 def valid_nhs_number(rng: random.Random) -> str:
     while True:
-        first_nine = f"{rng.randint(400_000_000, 799_999_999)}"
+        first_nine = f"{rng.randint(999_000_000, 999_999_999)}"
         cd = nhs_check_digit(first_nine)
         if cd is not None:
             return first_nine + str(cd)
@@ -548,4 +548,4 @@ def validate(path: str) -> int:
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main()) 
